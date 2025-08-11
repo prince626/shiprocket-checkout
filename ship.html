@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.shiprocket.in/js/checkout.min.js"></script>
+
+
+    <script>
+        function launchShiprocketCheckout() {
+            ShiprocketCheckout.launch({
+                token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjY0MjYyMDksInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzU1NzkyMzMzLCJqdGkiOiJ4M3oxVGRRdDJRMURFdnc3IiwiaWF0IjoxNzU0OTI4MzMzLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTc1NDkyODMzMywiY2lkIjo2MjA1OTI2LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.6W3xwlGs3jRuj2g20na8PrS8tLKB5G6oe_bYJr_WqOo',
+                cart: {
+                    items: [
+                        {
+                            name: "Product Name",
+                            sku: "SKU123",
+                            quantity: 1,
+                            price: 999,
+                        },
+                    ],
+                    currency: "INR",
+                },
+                user: {
+                    email: "api@wegosmile.com",
+                    phone: "6283896436",
+                },
+            });
+        }
+    </script>
+
+    <button onclick="launchShiprocketCheckout()">Buy Now</button>
+
+</body>
+
+</html>
